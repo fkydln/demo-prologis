@@ -117,7 +117,7 @@
                           //			file:"https://dcunilive83-lh.akamaihd.net/i/dclive_1@1014824/master.m3u8", // Demo Live - HD @1014824
                           //			file:"https://eventcompression.akamaized.net/edge/live_023460106a7b11ea98866fb547d2d2fd/index.m3u8", // Demo Live - HD West
                           //			file:"https://eventcg-hls.secdn.net/eventcg-live/play/demo-hd-live/playlist.m3u8", //
-                          file: "https://dacastmmd.mmdlive.lldns.net/dacastmmd/daab92260035457b83eb80c2b38c8691/manifest.m3u8?p=79&h=aa82bc4f869177b74b323946d5196830", //
+                          file: "./record_000002.mp4", //
                           image: "slate-live-1280.png",
                         },
                       ],
@@ -172,9 +172,14 @@
           <!-- Replace src with the link below for current q&a -->
           <!-- https://video.ibm.com/qna/24346891?sitemode=1&ownermode=1 -->
           <div class="qNAContainer">
-            <iframe
+            <img
+              src="./Screenshot 2022-01-29 155608.png"
+              alt="Q&A Bar"
+              style="width: 100%"
+            />
+            <!-- <iframe
               class="responsive-iframe"
-              src="https://video.ibm.com/socialstream/24346891?videos=0&amp;theme=g10&amp;messageVerticalSpacing=default&amp;mainLinkColor=0f62fe&amp;moderatorNameColor=d12771"
+              src="./Screenshot 2022-01-29 155608.png"
               style="border: 0"
               webkitallowfullscreen=""
               allowfullscreen=""
@@ -182,7 +187,7 @@
               width="100%"
               height="437"
               referrerpolicy="no-referrer-when-downgrade"
-            ></iframe>
+            ></iframe> -->
           </div>
 
           <!-- hr tag replaced with the div below -->
@@ -258,6 +263,16 @@
         url("./F2-file.ttf") format("ttf");
     }
 
+    /* @font-face {
+      font-family: f1;
+      src: url("./file.woff2") format("woff2"), url("./file.woff") format("woff"), url("./file.ttf") format("ttf");
+  }
+
+  @font-face {
+      font-family: f2;
+      src: url("./file.woff2") format("woff2"), url("./file.woff") format("woff"), url("./file.ttf") format("ttf");
+  } */
+
     header,
     main,
     footer {
@@ -271,6 +286,7 @@
       height: 46px;
     }
   </style>
+
   <style>
     a,
     a:hover,
@@ -301,7 +317,8 @@
       position: relative;
       overflow: hidden;
       width: 100%;
-      padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+      /* padding-top: 56.25%;  */
+      /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
     }
     footer {
       margin-bottom: 10% !important;
@@ -353,7 +370,8 @@
         position: relative;
         overflow: hidden;
         width: 100%;
-        padding-top: 70%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+        /* padding-top: 70%;  */
+        /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
       }
       footer {
         margin-bottom: 5% !important;
@@ -376,7 +394,8 @@
         position: relative;
         overflow: hidden;
         width: 100%;
-        padding-top: 100%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+        /* padding-top: 100%; */
+        /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
         margin-bottom: 5%;
       }
     }
@@ -399,7 +418,8 @@
         position: relative;
         overflow: hidden;
         width: 100%;
-        padding-top: 120%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+        /* padding-top: 120%;  */
+        /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
         margin-bottom: 5%;
       }
     }
@@ -420,7 +440,8 @@
         position: relative;
         overflow: hidden;
         width: 100%;
-        padding-top: 140%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+        /* padding-top: 140%; */
+        /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
         margin-bottom: 5%;
       }
     }
@@ -441,7 +462,8 @@
         position: relative;
         overflow: hidden;
         width: 100%;
-        padding-top: 160%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+        /* padding-top: 160%;  */
+        /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
         margin-bottom: 5%;
       }
     }
@@ -462,7 +484,8 @@
         position: relative;
         overflow: hidden;
         width: 100%;
-        padding-top: 160%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+        /* padding-top: 160%; */
+        /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
         margin-bottom: 15% !important;
       }
     }
