@@ -1,7 +1,5 @@
 <html lang="en">
   <head>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <meta
       http-equiv="Cache-Control"
       content="no-cache, no-store, must-revalidate"
@@ -27,6 +25,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HTML5 Player</title>
+    <script src="https://eventcg-77fa.kxcdn.com/jwplayer/7.12.8/jwplayer.js"></script>
+    <script>
+      jwplayer.key = "etxX8lsV9+b0+cXj+ylRCc8AuOscywwVkLLujeF/WU4=";
+    </script>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -81,17 +83,17 @@
               justify-content: center;
               text-align: center;
             "
-            href="./alternate.html"
-            >Alternate Video Servers</a
+            href="./index.html"
+            >Primary Video Servers</a
           >
         </div>
 
         <div align="center" style="margin-top: 1%" class="videoContainer">
-          <div
+          <table
             class="responsive-iframe"
             id="table-player-border"
-            width="960"
-            height="540"
+            width="928"
+            height="522"
             border="0"
             style="border-collapse: collapse"
             cellspacing="0"
@@ -99,31 +101,55 @@
             bordercolorlight="#808080"
             bordercolordark="#808080"
           >
-            <!-- Begin Video -->
+            <tbody>
+              <tr>
+                <td>
+                  <!-- Begin Video -->
 
-            <!-- Start IBM Player -->
-            <iframe
-              class="responsive-iframe"
-              src="./record_000002.mp4"
-              width="960"
-              height="540"
-              style="
-                display: flex;
-                background-color: black;
-                justify-tracks: center;
-                margin: auto;
-                padding: 1px;
-              "
-              webkitallowfullscreen=""
-              allowfullscreen=""
-              frameborder="no"
-              referrerpolicy="no-referrer-when-downgrade"
-            >
-            </iframe>
-            <!-- End Player -->
-
-            <!-- End Video -->
-          </div>
+                  <!-- Start JW7.12 Live Player -->
+                  <div id="container">...Loading Player</div>
+                  <script type="text/javascript">
+                    var playerInstance = jwplayer("container");
+                    playerInstance.setup({
+                      playlist: [
+                        {
+                          //			file:"https://dcunilive30-lh.akamaihd.net/i/dclive_1@535396/master.m3u8", // client-live-hd @535396
+                          //			file:"https://dcunilive83-lh.akamaihd.net/i/dclive_1@1014824/master.m3u8", // Demo Live - HD @1014824
+                          //			file:"https://eventcompression.akamaized.net/edge/live_023460106a7b11ea98866fb547d2d2fd/index.m3u8", // Demo Live - HD West
+                          //			file:"https://eventcg-hls.secdn.net/eventcg-live/play/demo-hd-live/playlist.m3u8", //
+                          file: "https://dacastmmd.mmdlive.lldns.net/dacastmmd/daab92260035457b83eb80c2b38c8691/manifest.m3u8?p=79&h=aa82bc4f869177b74b323946d5196830", //
+                          image: "slate-live-1280.png",
+                        },
+                      ],
+                      skin: { name: "seven", background: "" }, // beelden, bekle, [five], glow, roundster, seven, six, stormtrooper, vapor,
+                      width: "100%",
+                      aspectratio: "16:9",
+                      // width:"960",
+                      // height:"540",
+                      autostart: false,
+                    });
+                  </script>
+                  <script type="text/javascript">
+                    let backPadding = document.getElementById("container");
+                    // console.log(document.getElementById("container"));
+                    // adding background padding
+                    // console.log(backPadding.querySelector("div"));
+                    // backPadding.querySelectorAll("div")[1].style.backgroundColor = "black"
+                    backPadding.querySelectorAll("div")[1].style.padding =
+                      "auto";
+                    backPadding.querySelectorAll("div")[1].style.margin =
+                      "auto";
+                    backPadding.querySelectorAll("div")[1].style.display =
+                      "flex";
+                    backPadding.querySelectorAll("div")[1].style.border =
+                      "1px solid black";
+                  </script>
+                  <!-- End Player -->
+                  <!-- End Video -->
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
         <div style="display: flex; flex-direction: column">
           <div style="display: flex; justify-content: flex-end">
@@ -143,10 +169,12 @@
             >
           </div>
 
+          <!-- Replace src with the link below for current q&a -->
+          <!-- https://video.ibm.com/qna/24346891?sitemode=1&ownermode=1 -->
           <div class="qNAContainer">
             <iframe
               class="responsive-iframe"
-              src="./Screenshot 2022-01-29 155608.png"
+              src="https://video.ibm.com/socialstream/24346891?videos=0&amp;theme=g10&amp;messageVerticalSpacing=default&amp;mainLinkColor=0f62fe&amp;moderatorNameColor=d12771"
               style="border: 0"
               webkitallowfullscreen=""
               allowfullscreen=""
@@ -156,6 +184,7 @@
               referrerpolicy="no-referrer-when-downgrade"
             ></iframe>
           </div>
+
           <!-- hr tag replaced with the div below -->
           <!-- <div
             style="
@@ -229,16 +258,6 @@
         url("./F2-file.ttf") format("ttf");
     }
 
-    /* @font-face {
-      font-family: f1;
-      src: url("./file.woff2") format("woff2"), url("./file.woff") format("woff"), url("./file.ttf") format("ttf");
-  }
-
-  @font-face {
-      font-family: f2;
-      src: url("./file.woff2") format("woff2"), url("./file.woff") format("woff"), url("./file.ttf") format("ttf");
-  } */
-
     header,
     main,
     footer {
@@ -252,7 +271,6 @@
       height: 46px;
     }
   </style>
-
   <style>
     a,
     a:hover,
@@ -449,6 +467,7 @@
       }
     }
   </style>
+
   <!-- Prologis Live - https://webcastevents.com/events/prologis/townhall/ -->
   <script type="text/javascript">
     var sc_project = 12698155;
