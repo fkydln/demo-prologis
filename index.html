@@ -146,8 +146,15 @@
           <div class="qNAContainer">
             <img
               src="./Screenshot 2022-01-29 155608.png"
-              alt="Q&A Bar"
+              alt="Q&A Section Demo Image"
               style="width: 100%"
+              class="desktopView"
+            />
+            <img
+              src="./Screenshot_20220201-235604_Chrome.jpg"
+              alt="Q&A Section Demo Image"
+              style="width: 100%"
+              class="mobileView"
             />
             <!-- <iframe
               class="responsive-iframe"
@@ -291,6 +298,9 @@
       /* padding-top: 56.25%;  */
       /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
     }
+    .mobileView {
+      display: none;
+    }
     footer {
       margin-bottom: 10% !important;
     }
@@ -360,6 +370,12 @@
       .h1 {
         font-size: 2rem !important;
         margin-bottom: 3% !important;
+      }
+      .desktopView {
+        display: none;
+      }
+      .mobileView {
+        display: block;
       }
       .qNAContainer {
         position: relative;
